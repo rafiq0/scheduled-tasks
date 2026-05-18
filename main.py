@@ -19,8 +19,8 @@ if date in birthday_dict:
         new_content = content.replace("[NAME]",name)
     with smtplib.SMTP("smtp.gmail.com") as connection:
         to_email = email
-        my_email = os.environ.get("MY_EMAIL")
-        password = os.environ.get("MY_PASSWORD")
+        MY_EMAIL = os.environ.get("MY_EMAIL")
+        PASSWORD = os.environ.get("MY_PASSWORD")
         message = f"to:{to_email}\nSubject: HAPPY BIRTHDAY\n\n{new_content}"
         connection.starttls()
         connection.login(my_email,password)
