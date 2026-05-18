@@ -25,7 +25,7 @@ if date in birthday_dict:
         connection.starttls()
         connection.login(MY_EMAIL,MY_PASSWORD)
         connection.sendmail(
-            my_email,
+            MY_EMAIL,
             to_email,
             message
         )
