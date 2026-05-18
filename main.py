@@ -23,7 +23,7 @@ if date in birthday_dict:
         MY_PASSWORD = os.environ.get("MY_PASSWORD")
         message = f"to:{to_email}\nSubject: HAPPY BIRTHDAY\n\n{new_content}"
         connection.starttls()
-        connection.login(my_email,password)
+        connection.login(MY_EMAIL,MY_PASSWORD)
         connection.sendmail(
             my_email,
             to_email,
