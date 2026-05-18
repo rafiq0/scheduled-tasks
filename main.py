@@ -17,7 +17,7 @@ if date in birthday_dict:
     with open(file_path) as file:
         content = file.read()
         new_content = content.replace("[NAME]",name)
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         to_email = email
         MY_EMAIL = os.environ.get("MY_EMAIL")
         MY_PASSWORD = os.environ.get("MY_PASSWORD")
